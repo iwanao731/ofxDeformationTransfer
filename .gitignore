@@ -132,3 +132,6 @@ Desktop.ini
 
 .mailmap
 /apps*/
+*.dll
+*.exe
+*.exp
