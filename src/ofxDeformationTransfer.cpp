@@ -170,8 +170,8 @@ void ofxDeformationTransfer::setDtTransferData(ofMesh *mesh, MeshModel &model)
 	model.n_normvec = mesh->getNumNormals();		/* number of normals */
 	model.n_triangle = mesh->getNumIndices() / 3;	/* number of triangles */
 
-	model.vertex = mesh->getVerticesPointer();	/* vertex */
-	model.normvec = mesh->getNormalsPointer();	/* normal */
+	model.vertex = mesh->getVertices();	/* vertex */
+	model.normvec = mesh->getNormals();	/* normal */
 
 	/* triangle */
 	model.triangle = new Triangle[model.n_triangle];

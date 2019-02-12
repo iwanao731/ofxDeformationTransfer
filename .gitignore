@@ -135,3 +135,10 @@ Desktop.ini
 *.dll
 *.exe
 *.exp
+*.dll
+example/obj*/
+*.sln
+*.vcsproj
+*.filters
+*user
+/.vs*/

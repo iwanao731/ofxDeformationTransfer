@@ -25,8 +25,8 @@ namespace DT
 
 	struct MeshModel {
 		/* Vertices, norm vectors and triangular surfaces in the model */
-		ofVec3f   *vertex;      /* array of all vertices in the model */
-		ofVec3f   *normvec;     /* array of norm vectors */
+		vector<glm::vec3> vertex;      /* array of all vertices in the model */
+		vector<glm::vec3> normvec;     /* array of norm vectors */
 		Triangle *triangle;		/* array of all triangular units */
 						
 		/* Number of vertices, norm vectors and triangles in the model */
