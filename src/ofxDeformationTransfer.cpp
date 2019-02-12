@@ -79,7 +79,7 @@ void ofxDeformationTransfer::transfer2TargetModel(ofMesh *sourceB, ofMesh *targe
 	setDtTransferData(sourceB, trans.sourceB);
 
 	/* set Matrix F */
-#if 1
+#if 0
 	/* parallel computing */
 	std::vector<std::thread> workers;
 	std::atomic<int> i(0);
@@ -219,7 +219,7 @@ void ofxDeformationTransfer::QRFactorize(const MatrixXd &a, MatrixXd &q, MatrixX
 
 ofVec3f ofxDeformationTransfer::calcNormal(ofVec3f v1, ofVec3f v2, ofVec3f v3)
 {
-	return  v1 + ((v2 - v1).cross(v3 - v1)).normalize();
+	return ((v2 - v1).cross(v3 - v1));
 }
 
 void ofxDeformationTransfer::setMatrixBlock(MatrixXd &mBig, MatrixXd &mSmall, int iRow, int iCol)

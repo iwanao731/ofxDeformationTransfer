@@ -144,3 +144,4 @@ example/obj*/
 /.vs*/
 example/.vs/*
 *.vcxproj
+*.lib

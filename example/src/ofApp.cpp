@@ -4,8 +4,8 @@
 void ofApp::setup(){
 
 	/* load reference model*/
-	src_ref.load("horse-reference.ply");
-	trg_ref.load("horse-01.ply");
+	src_ref.load("Neutralm.ply");
+	trg_ref.load("boy.ply");
 
 	DT::ofxDeformationTransfer dTrans;
 
@@ -13,9 +13,12 @@ void ofApp::setup(){
 	dTrans.setReferenceModel(&src_ref, &trg_ref);
 
 	/* set deformed source model and transfer to target reference model */
-	src_def.load("horse-reference.ply");
-	trg_def.load("horse-reference.ply");
+	src_def.load("00m.ply");
+	trg_def.load("boy.ply");
+
 	dTrans.transfer2TargetModel(&src_def, &trg_def);
+
+	trg_def.save("boy_def.ply");
 }
 
 //--------------------------------------------------------------
