@@ -9,12 +9,7 @@
 #include <thread>
 #include <atomic>
 
-using Eigen::DynamicSparseMatrix;
-using Eigen::SparseMatrix;
-using Eigen::MatrixXd;
-using Eigen::HouseholderQR;
-using Eigen::Vector3d;
-using Eigen::Vector3f;
+using namespace Eigen;
 typedef Eigen::Triplet<double> T;
 
 namespace DT

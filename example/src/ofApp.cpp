@@ -13,10 +13,17 @@ void ofApp::setup(){
 	dTrans.setReferenceModel(&src_ref, &trg_ref);
 
 	/* set deformed source model and transfer to target reference model */
-	src_def.load("00m.ply");
+	src_def.load("21m.ply");
 	trg_def.load("boy.ply");
 
 	dTrans.transfer2TargetModel(&src_def, &trg_def);
+
+	// move to original place
+	ofVec3f center1 = trg_ref.getCentroid();
+	ofVec3f center2 = trg_def.getCentroid();
+	for (auto &v : trg_def.getVertices()) {
+		v -= center2 - center1;
+	}
 
 	trg_def.save("boy_def.ply");
 }
@@ -35,27 +42,26 @@ void ofApp::draw(){
 	light.enable();
 	light.setPosition(cam.getPosition());
 
+	cam.setFov(0.3);
 	cam.begin();
 
-	ofRotateY(-90);
-
 	ofPushMatrix();
-	ofTranslate(0, 100, 100);
+	ofTranslate(-150, 150, 0);
 	src_ref.draw();
 	ofPopMatrix();
 
 	ofPushMatrix();
-	ofTranslate(0, -100, 100);
+	ofTranslate(150, 150, 0);
 	src_def.draw();
 	ofPopMatrix();
 
 	ofPushMatrix();
-	ofTranslate(0, 100, -100);
+	ofTranslate(-150, -150, 0);
 	trg_ref.draw();
 	ofPopMatrix();
 
 	ofPushMatrix();
-	ofTranslate(0, -100, -100);
+	ofTranslate(150, -150, 0);
 	trg_def.draw();
 	ofPopMatrix();
 
