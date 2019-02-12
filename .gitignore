@@ -142,3 +142,5 @@ example/obj*/
 *.filters
 *user
 /.vs*/
+example/.vs/*
+*.vcxproj
