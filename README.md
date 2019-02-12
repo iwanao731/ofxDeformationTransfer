@@ -9,15 +9,12 @@ This addon applies the deformation exhibited by a source triangle mesh onto a di
 I test this environment below.
 
 - Windows
-	- openFrameworks v0.9.1
-	- Visual Studio 2015
-	- Windows 7
-- MAC OSX
-	- openFrameworks v0.9.2
-	- Xcode
+	- openFrameworks v0.10.1
+	- Visual Studio 2017
+	- Windows 10
+- MAC OSX (Not test)
 
 ## Library
 - Eigen 3.0.0~
 -- http://eigen.tuxfamily.org/index.php?title=Main_Page 
-
 
